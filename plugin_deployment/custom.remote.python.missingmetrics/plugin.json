@@ -1,0 +1,69 @@
+{
+    "name": "custom.remote.python.missingmetrics",
+    "metricGroup": "tech.missingmetrics",
+    "version": "0.19",
+    "experimentalMinVersion": "0.1",
+    "productiveMinVersion": "0.1",
+    "type": "python",
+    "entity": "CUSTOM_DEVICE",
+    "technologies": [
+        "None"
+    ],
+    "source": {
+        "package": "missingmetrics",
+        "className": "MissingMetricsPlugin",
+        "install_requires": [],
+        "activation": "Remote"
+    },
+    "metrics": [],
+    "properties": [
+        {
+            "key": "tenantUUID",
+            "type": "String"
+        },
+        {
+            "key": "apitoken",
+            "type": "Password"
+        },
+        {
+            "key": "calc_hostunits",
+            "type": "Boolean"
+        },
+        {
+            "key": "calc_hostunits_tag",
+            "type": "String"
+        }
+    ],
+    "configUI": {
+        "displayName": "Missing Metrics",
+        "properties": [
+            {
+                "key": "tenantUUID",
+                "displayName": "Dynatrace Tenant UUID",
+                "displayHint": "This tenant's UUID",
+                "displayOrder": 1
+            },
+            {
+                "key": "apitoken",
+                "displayName": "Dynatrace API token",
+                "displayHint": "API token with permissions to read entities and metrics",
+                "displayOrder": 3
+            },
+            {
+                "key": "calc_hostunits",
+                "displayName": "Calculate HU consumption for hosts",
+                "displayOrder": 2
+            },
+            {
+                "key": "calc_hostunits_tag",
+                "displayName": "Split HostUnit consumption based on tag",
+                "displayOrder": 5
+            }
+        ]
+    },
+    "ui": {
+        "keymetrics": [],
+        "keycharts":[],
+        "charts": []
+    }
+}
